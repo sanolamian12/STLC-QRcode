@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SYD TLC 앱 다운로드</title>
+  <title>시드니 더로드처치</title>
+  <meta http-equiv="refresh" content="0; url=https://stlc-web.vercel.app/">
+  <link rel="canonical" href="https://stlc-web.vercel.app/">
+  <script>window.location.replace("https://stlc-web.vercel.app/");</script>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: #f5f5f0;
@@ -13,98 +15,16 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      margin: 0;
       padding: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 40px 32px;
       text-align: center;
-      max-width: 360px;
-      width: 100%;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      color: #444;
     }
-    .icon { font-size: 56px; margin-bottom: 16px; }
-    h1 { font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
-    p { font-size: 15px; color: #666; line-height: 1.6; margin-bottom: 32px; }
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 16px;
-      border-radius: 12px;
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: none;
-      margin-bottom: 12px;
-      transition: opacity 0.2s;
-    }
-    .btn:hover { opacity: 0.85; }
-    .btn-android { background: #34A853; color: white; }
-    .btn-ios { background: #1a1a1a; color: white; }
-    .btn svg { width: 22px; height: 22px; fill: white; flex-shrink: 0; }
-    .divider {
-      font-size: 13px;
-      color: #aaa;
-      margin: 24px 0 20px;
-      position: relative;
-    }
-    .divider::before, .divider::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 38%;
-      height: 1px;
-      background: #e5e5e5;
-    }
-    .divider::before { left: 0; }
-    .divider::after { right: 0; }
-    .pc-msg { font-size: 13px; color: #999; margin-top: 8px; }
+    a { color: #1a1a1a; font-weight: 600; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="icon">✝️</div>
-    <h1>SYD TLC 앱</h1>
-    <p>아래 버튼을 눌러<br>앱을 다운로드하세요</p>
-
-    <a class="btn btn-android" href="https://play.google.com/store/apps/details?id=org.sydneythelordchurch.app">
-      <!-- Google Play icon -->
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.18 23.76c.3.17.65.19.97.07l11.4-11.4L12.18 9.06 3.18 23.76zm15.34-13.1L15.6 9.06 3.6.24C3.28.1 2.93.12 2.63.3L14.76 12.43l3.76-1.77zM21.6 10.8l-2.7-1.56-3.14 3.14 3.14 3.14 2.73-1.58c.78-.45.78-1.7-.03-2.14zM3.18.24C2.4.66 2.4 1.86 3.18 2.28L14.76 12.43 3.18 23.76c-.3-.12-.54-.36-.54-.66V.9C2.64.6 2.88.36 3.18.24z"/>
-      </svg>
-      Google Play (Android)
-    </a>
-
-    <a class="btn btn-ios" href="https://apps.apple.com/us/app/syd-tlc/id6755500090">
-      <!-- Apple icon -->
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-      </svg>
-      App Store (iPhone)
-    </a>
-
-    <p class="pc-msg" id="pc-msg" style="display:none">
-      📱 스마트폰으로 접속하시면<br>자동으로 스토어로 이동합니다
-    </p>
-  </div>
-
-  <script>
-    const ua = navigator.userAgent;
-    const isAndroid = /android/i.test(ua);
-    const isIOS = /iphone|ipad|ipod/i.test(ua);
-    const isMobile = isAndroid || isIOS;
-
-    if (isAndroid) {
-      window.location.href = "https://play.google.com/store/apps/details?id=org.sydneythelordchurch.app";
-    } else if (isIOS) {
-      window.location.href = "https://apps.apple.com/us/app/syd-tlc/id6755500090";
-    } else {
-      // PC 접속 시 안내 메시지 표시
-      document.getElementById('pc-msg').style.display = 'block';
-    }
-  </script>
+  <p>새 홈페이지로 이동 중입니다…<br>
+  자동으로 이동하지 않으면 <a href="https://stlc-web.vercel.app/">여기를 눌러 주세요</a>.</p>
 </body>
 </html>
